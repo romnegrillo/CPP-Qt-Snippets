@@ -11,7 +11,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->setMouseTracking(true);
 
-    this->current_page = 1;
+    this->current_page = 1;     // First page by default.
+    this->group_box_flag = 0;   // 0 is full screen picture, 1 is with button.
+    ui->picture_groupbox->setHidden(false);
+    ui->picture_with_button_groupbox->setHidden(true);
     this->max_page = 10;        // Sample
     ui->img_label->setText(QString::number(this->current_page));
 }
@@ -100,5 +103,25 @@ void MainWindow::change_page(int flag)
         this->current_page--;
     }
 
-     ui->img_label->setText(QString::number(this->current_page));
+    if(current_page==5)
+    {
+        this->group_box_flag = 1;
+    }
+    else
+    {
+        this->group_box_flag = 0;
+    }
+
+    if(this->group_box_flag ==0)
+    {
+        ui->picture_groupbox->setHidden(false);
+        ui->picture_with_button_groupbox->setHidden(true);
+        ui->img_label->setText(QString::number(this->current_page));
+    }
+    else
+    {
+        ui->picture_groupbox->setHidden(true);
+        ui->picture_with_button_groupbox->setHidden(false);
+        ui->img_half_label->setText(QString::number(this->current_page));
+    }
 }

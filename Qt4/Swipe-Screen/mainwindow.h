@@ -22,6 +22,8 @@ public:
     int max_page;
     int current_page;
     void change_page(int flag);
+    int group_box_flag;
+
 
 private slots:
     void mouseMoveEvent(QMouseEvent *event);
