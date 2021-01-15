@@ -1,6 +1,6 @@
 # CPP-Qt-Snippets 
 
-![Qt-Logo](/qt_logo.png?raw=true)
+![Qt-Logo](/qt_framework_logo.png?raw=true)
 
 ### About
 This repository contains snippets of code that I use for 
@@ -14,5 +14,6 @@ I made previously.
 This does not contain complete projects but only a "snippet" 
 that can be used for bigger projects in the future.
 
-I mainly used Qt4 because I used it in some projects
+I mainly use Qt4 because I use it in some projects
 which requires those version rather than using the latest Qt5.
+
